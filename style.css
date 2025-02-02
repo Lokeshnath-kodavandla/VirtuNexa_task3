@@ -1,0 +1,289 @@
+/* From Uiverse.io by rishichawda */ 
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+    fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+    opacity: 1;
+  }
+
+
+  /* style.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
+}
+
+.leftside {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.rightside label {
+    cursor: pointer;
+}
+
+.section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .leftside, .rightside {
+        margin-bottom: 10px;
+    }
+}
+
+/* Dark Theme */
+.dark-theme {
+    background: #121212;
+    color: #ffffff;
+}
+
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #a971ab, #50e3c2);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3rem;
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+
+
+.section1 {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+h4 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.paragraphforabout {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+}
+
+/* Light and Dark Theme */
+body {
+  background: #f9f9f9;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #ddd;
+}
+
+.dark-mode .section1 {
+  background: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .paragraphforabout {
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section1 {
+      padding: 15px;
+  }
+
+  h4 {
+      font-size: 20px;
+  }
+
+  .paragraphforabout {
+      font-size: 14px;
+  }
+}
+
+
+ .section2 {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.paragraphforabout {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #ddd;
+}
+
+.dark-mode .section1, .dark-mode .section2 {
+  background: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .paragraphforabout {
+  color: #ccc;
+}
+
+.dark-mode .footer {
+  background: #181818;
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section1, .section2 {
+      padding: 15px;
+  }
+
+  h4 {
+      font-size: 20px;
+  }
+
+  .paragraphforabout {
+      font-size: 14px;
+  }
+
+  .footer {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

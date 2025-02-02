@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navigation Bar */
+.nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+.leftside {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.rightside label {
+    cursor: pointer;
+}
+
+/* Hero Section */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(120deg, #D4145A, #FBB03B);
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.section1, .section2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+h4 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.paragraphforabout {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: #fff;
+    margin-top: 30px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .nav-bar-container {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background: linear-gradient(120deg, #333, #000);
+    color: #ddd;
+}
+
+.dark-mode .section1, .dark-mode .section2 {
+    background: #1e1e1e;
+    color: #ddd;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .paragraphforabout {
+    color: #ccc;
+}
+
+.dark-mode .footer {
+    background: #181818;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leftside, .rightside {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .section1, .section2 {
+        padding: 15px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .paragraphforabout {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
